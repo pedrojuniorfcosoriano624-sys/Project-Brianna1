@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per la mia principessa ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe6eb, #ffd6e0);
+            overflow-x: hidden;
+            color: #4a0e17;
+        }
+
+        .screen {
+            min-height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        #screen1 {
+            display: flex;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 30px;
+            color: #b3002d;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .btn-container {
+            position: relative;
+            height: 180px;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        #btn-yes {
+            background: #ff3366;
+            color: white;
+        }
+
+        #btn-yes:hover {
+            transform: scale(1.1);
+        }
+
+        #btn-no {
+            background: #999;
+            color: white;
+            position: absolute;
+        }
+
+        #screen2 {
+            background: #ff3366;
+            color: white;
+            cursor: pointer;
+        }
+
+        #screen2 h2 {
+            font-size: 4rem;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.15); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        #screen3 {
+            background: #fff0f3;
+            display: none;
+            padding: 40px 20px;
+        }
+
+        .letter-box {
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid #ffc2d1;
+        }
+
+        .letter-box h3 {
+            color: #ff3366;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .letter-text {
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            white-space: pre-wrap;
+        }
+
+        .letter-footer {
+            margin-top: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #b3002d;
+        }
+
+        .heart {
+            position: fixed;
+            color: #ff3366;
+            font-size: 25px;
+            animation: floatUp 4s linear infinite;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .audio-player {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 999;
+        }
+
+        .hint {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        @media(max-width: 600px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            #screen2 h2 {
+                font-size: 2.5rem;
+            }
+
+            .letter-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="screen1" class="screen">
+        <h1>¿Quieres seguir siendo la niña más especial de mi vida? ❤️</h1>
+
+        <div class="btn-container">
+            <button id="btn-yes" class="btn">Sí ❤️</button>
+            <button id="btn-no" class="btn">No 💔</button>
+        </div>
+    </div>
+
+    <div id="screen2" class="screen">
+        <h2>TE AMO ❤️</h2>
+        <p class="hint">Toca la pantalla</p>
+    </div>
+
+    <div id="screen3" class="screen">
+        <div class="letter-box">
+            <h3>Para ti mi amor ❤️</h3
